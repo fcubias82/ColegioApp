@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColegioApp.MainPage"
+             Title="Control de alumnos">
+
+    <StackLayout>
+        <ListView x:Name="lvAlumnos" HasUnevenRows="True" SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame Margin="10,10,10,10" CornerRadius="5" BackgroundColor="AliceBlue">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="15" />
+                                    <RowDefinition Height="15" />
+                                    <RowDefinition Height="15" />
+                                </Grid.RowDefinitions>
+
+                                <Label Text="Código" Grid.Row="0" Grid.Column="0" />
+                                <Label x:Name="lblCodigo" Grid.Row="0" Grid.Column="1" Text="{Binding Codigo}" />
+
+                                <Label Text="Nombre" Grid.Row="1" Grid.Column="0" />
+                                <Label x:Name="lblNombre" Grid.Row="1" Grid.Column="1" Text="{Binding Nombre}" />
+
+                                <Label Text="Apellido" Grid.Row="2" Grid.Column="0" />
+                                <Label x:Name="lblApellido" Grid.Row="2" Grid.Column="1" Text="{Binding Apellido}" />
+                            </Grid>
+                        </Frame>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
