@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ColegioApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace ColegioApp
         public LoginPage()
         {
             InitializeComponent();
+            BindingContext = new LoginViewModel();
         }
 
         private async void btnIngresar_Clicked(object sender, EventArgs e)
