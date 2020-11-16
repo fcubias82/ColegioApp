@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColegioApp.Views.CrearAlumnoPage">
+    <ContentPage.Content>
+        <Frame Margin="10,20,0,0">
+            <StackLayout>
+                <Label Text="Código"/>
+                <Entry x:Name="enCodigo" Placeholder="Digite su código" />
+                <Label Text="Apellido:" />
+                <Entry x:Name="enApellido" Placeholder="Digite su apellido" />
+                <Label Text="Nombre:" />
+                <Entry x:Name="enNombre" Placeholder="Digite su nombre" />
+                <Button x:Name="btnIngresar" Text="Ingresar" Clicked="btnIngresar_Clicked" BackgroundColor="Blue" TextColor="White" HorizontalOptions="Center" WidthRequest="120" />
+            </StackLayout>
+        </Frame>
+        
+    </ContentPage.Content>
+</ContentPage>

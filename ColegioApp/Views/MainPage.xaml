@@ -5,7 +5,13 @@
              Title="Control de alumnos">
 
     <StackLayout>
-        <ListView x:Name="lvAlumnos" HasUnevenRows="True" SeparatorVisibility="None">
+        <!-- 
+        <Button x:Name="btnPrueba" Clicked="btnPrueba_Clicked" Text="Prueba Mensaje" />
+        -->
+
+        <Button x:Name="btnCrearAlumno" Text="Crear Alumno" Clicked="btnCrearAlumno_Clicked" BackgroundColor="Blue" TextColor="White" HorizontalOptions="Center" Margin="0,10,0,0"/>
+
+        <ListView x:Name="lvAlumnos" HasUnevenRows="True" SeparatorVisibility="None" ItemSelected="lvAlumnos_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

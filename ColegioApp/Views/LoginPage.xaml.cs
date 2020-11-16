@@ -13,23 +13,13 @@ namespace ColegioApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+        LoginViewModel context;
         public LoginPage()
         {
             InitializeComponent();
-            BindingContext = new LoginViewModel();
-        }
-
-        private async void btnIngresar_Clicked(object sender, EventArgs e)
-        {
-            if(txtUsuario.Text == "usuario" && txtContrasenia.Text == "123456")
-            {
-                Navigation.InsertPageBefore(new MainPage(),this);
-                await Navigation.PopAsync();                        
-            }
-            else
-            {
-                await DisplayAlert("Error", "Usuario ó contraseña incorrectos", "OK");
-            }
-        }
+            
+            BindingContext = context = new LoginViewModel();
+            context.Navigation = Navigation;
+        }        
     }
 }
